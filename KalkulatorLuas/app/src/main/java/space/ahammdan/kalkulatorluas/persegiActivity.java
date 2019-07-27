@@ -13,11 +13,13 @@ public class persegiActivity extends AppCompatActivity {
     private TextView mHasil;
     private Button mHitung;
 
+    boolean isEmpty = false;
+    boolean isInvalidDouble = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_persegi);
-
         mHitung = findViewById(R.id.btn_hitung);
         mHasil = findViewById(R.id.hasil);
         mInputA = findViewById(R.id.input_awal);
@@ -29,15 +31,13 @@ public class persegiActivity extends AppCompatActivity {
         }
 
 
-        mHasil.setOnClickListener(new View.OnClickListener() {
+        mHitung.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (v.getId() == R.id.btn_hitung) {
                     String sisia = text(mInputA);
                     String sisiz = text(mInputZ);
 
-                    boolean isEmpty = false;
-                    boolean isInvalidDouble = false;
+
 
                     if(sisia.isEmpty()){
                         isEmpty = true;
@@ -60,11 +60,10 @@ public class persegiActivity extends AppCompatActivity {
                         mInputZ.setError("Invalid Format");
                     }
 
-                    if(!isEmpty && !isInvalidDouble){
+                    if(!isEmpty && !isInvalidDouble) {
                         double hasil = dSisia * dSisiz;
                         mHasil.setText(String.valueOf(hasil));
                     }
-                }
             }
         });
     }

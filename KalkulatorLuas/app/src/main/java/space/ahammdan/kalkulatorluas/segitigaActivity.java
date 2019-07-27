@@ -28,7 +28,7 @@ public class segitigaActivity extends AppCompatActivity {
             mHasil.setText(hasil);
         }
 
-        mHasil.setOnClickListener(new View.OnClickListener() {
+        mHitung.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (v.getId() == R.id.btn_hitung) {
@@ -60,7 +60,7 @@ public class segitigaActivity extends AppCompatActivity {
                     }
 
                     if(!isEmpty && !isInvalidDouble){
-                        double hasil = dAlas * dTinggi;
+                        double hasil = (dAlas * dTinggi) / 2;
                         mHasil.setText(String.valueOf(hasil));
                     }
                 }
