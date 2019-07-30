@@ -2,4 +2,5 @@
     <string name="app_name">KalkulatorLuas</string>
     <string name="luas_persegi">Luas_Persegi</string>
     <string name="hitung">hitung</string>
+    <string name="result">result</string>
 </resources>

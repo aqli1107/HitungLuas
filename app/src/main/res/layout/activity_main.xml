@@ -22,4 +22,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="luas_segitiga"/>
+    <Button
+        android:id="@+id/btn_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/result"
+        android:layout_marginBottom="16dp"/>
+    <TextView
+        android:id="@+id/txt_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"/>
 </LinearLayout>

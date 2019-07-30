@@ -1,5 +1,7 @@
 package space.ahammdan.kalkulatorluas;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -62,8 +64,13 @@ public class persegiActivity extends AppCompatActivity {
 
                     if(!isEmpty && !isInvalidDouble) {
                         double hasil = dSisia * dSisiz;
+                        Intent data = new Intent();
+                        data.setData(Uri.parse(String.valueOf(hasil)));
+                        setResult(RESULT_OK, data);
+                        finish();
                         mHasil.setText(String.valueOf(hasil));
                     }
+
             }
         });
     }
